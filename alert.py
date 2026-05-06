@@ -17,7 +17,8 @@ client = Client(account_sid, auth_token)
 def send_sms(message):
     print(f"\n🔔 {message}")
     client.messages.create(
-        messaging_service_sid='MG7f2aaf3a2ede122500feb9fe1e8918f1',
+        
+        messaging_service_sid=os.getenv("Service"),
         to=os.getenv("Number"),
         body=message
     )
