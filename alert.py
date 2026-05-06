@@ -18,7 +18,7 @@ def send_sms(message):
     print(f"\n🔔 {message}")
     client.messages.create(
         messaging_service_sid='MG7f2aaf3a2ede122500feb9fe1e8918f1',
-        to='+9779841734277',
+        to=os.getenv("Number"),
         body=message
     )
 
